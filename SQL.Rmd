@@ -185,14 +185,13 @@ ggplot(data=disease, aes(x=`Condition`, y=Number)) +
   theme_minimal() +
   labs(y= "Number of cases", x = "Condition") +
   coord_flip()
+```
 
 ```{r}
 result9 <- dbSendQuery(mysqlconnection, "SELECT genus FROM microbe JOIN study ON study.microbe_id = microbe.microbe_id WHERE genus <> 'NA'") 
 microbiota <- fetch(result9, n =-1)
 microbiota <- data.frame(table(microbiota$genus)) %>%
   rename(Number = Freq, Genus = Var1) 
-```
-
 microbiota <- microbiota[order(-microbiota$Number), ]
 top_20 <- head(microbiota, 20)
 ggplot(data=top_20, aes(x=reorder(Genus, Number), y=Number)) +
@@ -202,5 +201,4 @@ ggplot(data=top_20, aes(x=reorder(Genus, Number), y=Number)) +
   coord_flip()
 ```
 
-```
 
