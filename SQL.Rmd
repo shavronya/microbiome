@@ -18,7 +18,7 @@ world_map <- ne_countries(scale = "medium", returnclass = "sf")
 ```{r}
 lapply(dbListConnections(MySQL()), dbDisconnect)
 mysqlconnection <-  dbConnect(RMySQL::MySQL(),
-                            dbname='microbiome',
+                            dbname='',
                             host='',
                             port=,
                             user='',
