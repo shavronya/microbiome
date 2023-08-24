@@ -5,5 +5,5 @@ To reach the goal, the following tasks were set:
 * mine & catalogue the abundance, depletion & loss of microbes;
 * survey the impact of microbial diversity on health & disease.
 
-The project is an intership task at A*STAR (Bioinformatics intitute). 
+The project is an intership task at A*STAR (Bioinformatics Intitute). 
 
