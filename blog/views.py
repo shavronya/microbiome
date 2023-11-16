@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 from .models import Post
 from django import forms
 from blog.forms import PostForm
